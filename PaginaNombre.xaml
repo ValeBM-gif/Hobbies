@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TDMPW_412_2P_PR02.PaginaNombre"
+             IconImageSource="volume.png"
+             BackgroundColor="#73c3f9">
+    <VerticalStackLayout>
+        <Frame BorderColor="#73c3f9"
+               CornerRadius="40"
+               Padding="20"
+               Margin="15">
+            <StackLayout VerticalOptions="Center">
+                <ScrollView>
+                    <VerticalStackLayout>
+
+                        <Label x:Name="lblNombre"
+                               FontSize="48"
+                               TextColor="#ffb332"
+                               FontFamily="Futura"
+                               FontAttributes="Bold"
+                               Margin="15"
+                               HorizontalOptions="Center">Nombre</Label>
+                            
+                        <BoxView Color="#826ae0"
+                                 HeightRequest="5"
+                                 WidthRequest="250"
+                                 HorizontalOptions="Center"/>
+                    
+                        <Label TextColor="#826ae0"
+                               FontSize="36"
+                               FontFamily="Futura"
+                               Margin="15,20,0,0"
+                               HorizontalOptions="Start">Hobbies</Label>
+
+                        <HorizontalStackLayout HorizontalOptions="Start">
+                            <CheckBox x:Name="ckb1"
+                                      Color="#73c3f9"
+                                    IsChecked="False"
+                                    VerticalOptions="Center"
+                                    HorizontalOptions="Start"
+                                    CheckedChanged="ckb1_CheckedChanged"/>
+                            <Label Text="Leer algún libro"
+                                   TextColor="#73c3f9"
+                                   FontFamily="Futura"
+                                   FontSize="24"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Start"/>
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout HorizontalOptions="Start">
+                            <CheckBox x:Name="ckb2"
+                                      Color="#73c3f9"
+                                      IsChecked="False"
+                                      VerticalOptions="Center"
+                                      HorizontalOptions="Start"
+                                      CheckedChanged="ckb2_CheckedChanged"/>
+                            <Label Text="Dibujar o pintar"
+                                   TextColor="#73c3f9"
+                                   FontFamily="Futura"
+                                   FontSize="24"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Start"/>
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout HorizontalOptions="Start">
+                            <CheckBox x:Name="ckb3"
+                                      Color="#73c3f9"
+                                      IsChecked="False"
+                                      VerticalOptions="Center"
+                                      HorizontalOptions="Start"
+                                      CheckedChanged="ckb3_CheckedChanged"/>
+                            <Label Text="Ver películas o series"
+                                   TextColor="#73c3f9"
+                                   FontFamily="Futura"
+                                   FontSize="24"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Start"/>
+                        </HorizontalStackLayout>
+
+                        <Label TextColor="#826ae0"
+                               FontSize="36"
+                               FontFamily="Futura"
+                               Margin="15,20,0,0"
+                               HorizontalOptions="Start">Nivel</Label>
+
+                        <Grid ColumnDefinitions=".9*, .1*" RowDefinitions=".33*, .33*, .33*">
+                            <Slider x:Name="sld1"
+                                    Maximum="10"
+                                    Minimum="0"
+                                    Margin="10,0,0,0"
+                                    MinimumTrackColor="#ffdd40"
+                                    MaximumTrackColor="#e58b6c"
+                                    ThumbColor="#ffb332"
+                                    HorizontalOptions="Center"
+                                    Grid.Column="0"
+                                    Grid.Row="0"
+                                    IsEnabled="False"
+                                    ValueChanged="sld1_ValueChanged"
+                                    />
+                            <Label x:Name="lbl1"
+                                   TextColor="#73c3f9"
+                                   FontFamily="Futura"
+                                   FontSize="24"
+                                   FontAttributes="Bold"
+                                   Margin="15"
+                                   HorizontalOptions="Center"
+                                   Grid.Column="1"
+                                   Grid.Row="0">0</Label>
+                            <Slider x:Name="sld2"
+                                    Maximum="10"
+                                    Minimum="0"
+                                    Margin="10,0,0,0"
+                                    MinimumTrackColor="#ffdd40"
+                                    MaximumTrackColor="#e58b6c"
+                                    ThumbColor="#ffb332"
+                                    HorizontalOptions="Center"
+                                    Grid.Column="0"
+                                    Grid.Row="1"
+                                    IsEnabled="False"
+                                    ValueChanged="sld2_ValueChanged"
+                                    />
+                            <Label x:Name="lbl2"
+                                   TextColor="#73c3f9"
+                                   FontFamily="Futura"
+                                   FontSize="24"
+                                   FontAttributes="Bold"
+                                   Margin="15"
+                                   HorizontalOptions="Center"
+                                   Grid.Column="1"
+                                   Grid.Row="1">0</Label>
+                            <Slider x:Name="sld3"
+                                    Maximum="10"
+                                    Minimum="0"
+                                    Margin="10,0,0,0"
+                                    MinimumTrackColor="#ffdd40"
+                                    MaximumTrackColor="#e58b6c"
+                                    ThumbColor="#ffb332"
+                                    HorizontalOptions="End"
+                                    Grid.Column="0"
+                                    Grid.Row="2"
+                                    IsEnabled="False"
+                                    ValueChanged="sld3_ValueChanged"
+                                    />
+                            <Label x:Name="lbl3"
+                                   TextColor="#73c3f9"
+                                   FontFamily="Futura"
+                                   FontSize="24"
+                                   FontAttributes="Bold"
+                                   Margin="15"
+                                   HorizontalOptions="Center"
+                                   Grid.Column="1"
+                                   Grid.Row="2">0</Label>
+                        </Grid>
+                        
+
+                    </VerticalStackLayout>
+                </ScrollView>
+            </StackLayout>
+        </Frame>
+        <Entry x:Name="txtNombre"
+               TextColor="#826ae0"
+               BackgroundColor="White"
+               FontSize="16"
+               Margin="30,0"
+               Placeholder="Ingresa tu nombre"
+               TextChanged="txtNombre_TextChanged"/>
+        <Image Source="flowerr.png"
+               Margin="0,-140,0,0"
+               WidthRequest="200"/>
+    </VerticalStackLayout>
+</ContentPage>

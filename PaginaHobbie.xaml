@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TDMPW_412_2P_PR02.PaginaHobbie"
+             IconImageSource="headphone.png"
+             BackgroundColor="#73c3f9">
+    <Frame BorderColor="Transparent"
+           CornerRadius="40"
+           Padding="20"
+           Margin="15">
+        <StackLayout>
+            <ScrollView>
+                <VerticalStackLayout>
+
+                    <Grid>
+                        <Label x:Name="lblHobby"
+                               TextColor="#ffb332"
+                               FontFamily="Futura"
+                               FontSize="48"
+                               FontAttributes="Bold"
+                               Margin="15"
+                               HorizontalOptions="Start"
+                               VerticalOptions="Center">Hobby</Label>
+                        <Switch x:Name="swt1"
+                                IsToggled="False"
+                                OnColor="#ffdd40"
+                                ThumbColor="#ffb332"
+                                HorizontalOptions="End"
+                                VerticalOptions="Center"
+                                Toggled="swt1_Toggled"/>       
+                    </Grid>
+
+                    <BoxView Color="#826ae0"
+                             HeightRequest="5"
+                             WidthRequest="820"
+                             HorizontalOptions="Start"/>
+
+                    <Label HeightRequest="150"/>
+
+                    <Stepper x:Name="stp1"
+                             Maximum="10"
+                             Minimum="0"
+                             Margin="0,10"
+                             Increment="1"
+                             HorizontalOptions="Center"
+                             ValueChanged="stp1_ValueChanged"/>
+
+                    <Slider x:Name="sldStepper"
+                            Maximum="10"
+                            Minimum="0"
+                            MinimumTrackColor="#ffdd40"
+                            MaximumTrackColor="#e58b6c"
+                            ThumbColor="#ffb332"
+                            HorizontalOptions="Fill"
+                            IsEnabled="False"
+                            ValueChanged="sldStepper_ValueChanged"/>
+
+                    <Label x:Name="lblStepper"
+                           TextColor="#73c3f9"
+                           FontFamily="Futura"
+                           FontSize="36"
+                           FontAttributes="Bold"
+                           Margin="15"
+                           HorizontalOptions="Center">0</Label>
+
+                    <Entry x:Name="txtHobby"
+                           TextColor="#826ae0"
+                           FontSize="16"
+                           WidthRequest="400"
+                           Margin="0,40,0,0"
+                           HorizontalOptions="Start"
+                           Placeholder="Ingresa el hobbie"
+                           TextChanged="txtHobby_TextChanged"/>
+
+                    <Image Source="plant.png"
+                           VerticalOptions="Start"
+                           Margin="0,-40,0,0"
+                           WidthRequest="400"/>
+
+                    
+
+                </VerticalStackLayout>
+            </ScrollView>
+        </StackLayout>   
+    </Frame>
+</ContentPage>

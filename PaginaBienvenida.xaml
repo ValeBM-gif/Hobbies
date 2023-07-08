@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TDMPW_412_2P_PR02.PaginaBienvenida"
+             IconImageSource="hobbies.png"
+             BackgroundColor="#73c3f9">
+    <Frame BorderColor="#73c3f9"
+           CornerRadius="40"
+           Padding="20"
+           Margin="15">
+        <StackLayout VerticalOptions="Center">
+            <ScrollView>
+                <VerticalStackLayout>
+
+                    <Frame Margin="10"
+                           CornerRadius="100"
+                           HeightRequest="200"
+                           WidthRequest="200"
+                           BorderColor="Transparent"
+                           IsClippedToBounds="True"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center">
+                           <Image Source="world.png"
+                                  Aspect="AspectFill"
+                                  HeightRequest="200"
+                                  WidthRequest="200"/>
+                    </Frame>
+
+                    <BoxView Color="#826ae0"
+                             HeightRequest="5"
+                             HorizontalOptions="Fill"/>
+
+                    <Label TextColor="#ffb332"
+                           FontSize="48"
+                           FontFamily="Futura"
+                           FontAttributes="Bold"
+                           Margin="15"
+                           HorizontalOptions="Center">Hobbies</Label>
+
+                </VerticalStackLayout>
+            </ScrollView>
+        </StackLayout>       
+    </Frame>
+</ContentPage>
